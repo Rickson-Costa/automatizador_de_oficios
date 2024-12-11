@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-gray-50">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Ofícios</title>
+    <meta name="description" content="Gerador de Ofícios Automatizado">
+    <title>OFICIO BOT</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://fontawesome.com/icons/file?f=classic&s=solid" />
 </head>
-<body>
-    <h1>Gerador de Ofícios</h1>
-    <form action="/" method="post" enctype="multipart/form-data">
-        <label for="spreadsheet">Selecione a planilha:</label>
-        <input type="file" id="spreadsheet" name="spreadsheet" accept=".xls,.xlsx" required>
-        <br><br>
-        <button type="submit">Gerar Ofícios</button>
-    </form>
+<body class="flex flex-col min-h-screen bg-gray-100">
+    <!-- Header -->
+    <header class="bg-green-600 text-white shadow-md">
+        <div class="container mx-auto flex items-center justify-center p-4">
+            <h1 class="text-xl font-bold flex items-center">
+                <i class="fa-solid fa-file-lines mr-2"></i> OFICIO BOT
+            </h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto p-6">
+        <div class="bg-white shadow-md rounded-lg p-8 max-w-lg mx-auto">
+            <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6 flex items-center justify-center">
+                <i class="fa-solid fa-file-arrow-down mr-2"></i> Gerador de Ofícios
+            </h2>
+            <form action="/" method="post" enctype="multipart/form-data" class="space-y-4">
+                <div>
+                    <label for="spreadsheet" class="block text-sm font-medium text-gray-700 flex items-center">
+                        <i class="fa-solid fa-file-excel mr-2"></i> Selecione a planilha
+                    </label>
+                    <input 
+                        type="file" 
+                        id="spreadsheet" 
+                        name="spreadsheet" 
+                        accept=".xls,.xlsx" 
+                        required 
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                    >
+                </div>
+                <button 
+                    type="submit" 
+                    class="w-full bg-green-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none flex items-center justify-center">
+                    <i class="fa-solid fa-file-circle-plus mr-2"></i> Gerar Ofícios
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white text-center py-4">
+        <p class="text-sm flex items-center justify-center">
+            <i class="fa-solid fa-copyright mr-2"></i> Rickson Henrique
+        </p>
+    </footer>
 </body>
 </html>
